@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -40,41 +38,4 @@ public class Text {
         Text enter = new Text(text);
 
     }
-
-/*
-    public ArrayList Answer_2 () {
-        ArrayList big_string_with_count = new ArrayList();
-        //int pos = 0;
-        for (int i = 0; i < sentences.length ; i++) {
-            //string_with_count
-            for (int j = 0; j < sentences[i].getList().length ; i++){
-                big_string_with_count.add(sentences[i].getList()[j]);
-            }
-            //pos += sentences[i].getList().length;
-
-        }
-        for(Object k: big_string_with_count){
-            System.out.println(k);
-        }
-        return big_string_with_count;
-
-    }
-*/
-
-
-
-
-    /*
-     static void Answer(String text, String entered_char) {
-        Text enter = new Text(text);
-        Text text = (Text) entered_char;
-    }
-
-    static void Answer(String text, char entered_char) {
-        Text enter = new Text(text);
-        Letter entered_char = new Letter()
-
-    }*/
-
-    //public Sentence[] getSentences(){return sentences;}
 }

@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Sentence {
     private static final String PUNCTUATION_SYMBOLS = ";:,.!?";
     private Word [] words;
