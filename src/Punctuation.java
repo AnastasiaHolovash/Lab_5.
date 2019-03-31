@@ -3,6 +3,5 @@ class Punctuation {
 
     Punctuation(String symbol) {
         this.symbol = symbol;
-        //System.out.println("P  >>  "+ symbol);
     }
 }

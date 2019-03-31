@@ -11,15 +11,12 @@ class Sentence extends Main{
         string_with_count = new String[words.length];
 
         for (int i = 0; i < splitString.length; i++) {
-            //System.out.println(splitString[i]);
-           // words[i] = new Word(splitString[i]);
 
             if (PUNCTUATION_SYMBOLS.contains(splitString[i])) {
                 punctuations[i] = new Punctuation(splitString[i]);
-                //System.out.println(splitString[i]);
             } else {
                 words[i] = new Word(splitString[i]);
-                System.out.println(words[i].Letter_counter(entered_char));
+                //System.out.println(words[i].Letter_counter(entered_char));
                 string_with_count[i] = (words[i].Letter_counter(entered_char) + " : " + splitString[i]);
             }
 

@@ -7,28 +7,29 @@ class Text {
     private char myChar;
 
     private Text(String textString, Letter entered_char) {
+        System.out.println("==========Original=========");
+        System.out.println();
         System.out.println(textString);
+        System.out.println();
 
         String[] splitString = textString.split("(?<=[?!.])");
-        //System.out.println(splitString);
         Sentence[] sentences = new Sentence[splitString.length];
         for (int i = 0; i < splitString.length; i++) {
             sentences[i] = new Sentence(splitString[i], entered_char);
 
             for(String k: sentences[i].getList()){
-                //System.out.println(k);
                 if (k != null) {
                     big_string_with_count.add(k);
                 }
 
             }
-            //System.out.println(splitString[i]);
         }
         for (Object i: big_string_with_count) {
-            System.out.println(i);
+            //System.out.println(i);
         }
         big_string_with_count.sort(Collections.reverseOrder());
         System.out.println("==========Sorted=========");
+        System.out.println();
         for (Object i: big_string_with_count) {
             System.out.println(i);
         }
