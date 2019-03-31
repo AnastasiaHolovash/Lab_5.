@@ -1,7 +1,7 @@
 public class Letter {
     private char symbol;
 
-    public Letter(char symbol) {
+    Letter(char symbol) {
         this.symbol = symbol;
     }
 

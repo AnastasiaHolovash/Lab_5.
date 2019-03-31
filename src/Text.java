@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Text {
-    public Sentence[] sentences;
-    ArrayList big_string_with_count = new ArrayList();
+class Text {
 
-    public Text(String textString) {
+    private ArrayList big_string_with_count = new ArrayList();
+    private char myChar;
+
+    private Text(String textString, Letter entered_char) {
         System.out.println(textString);
 
         String[] splitString = textString.split("(?<=[?!.])");
         //System.out.println(splitString);
-        sentences = new Sentence[splitString.length];
+        Sentence[] sentences = new Sentence[splitString.length];
         for (int i = 0; i < splitString.length; i++) {
-            sentences[i] = new Sentence(splitString[i]);
+            sentences[i] = new Sentence(splitString[i], entered_char);
 
             for(String k: sentences[i].getList()){
                 //System.out.println(k);
@@ -34,8 +35,8 @@ public class Text {
 
     }
 
-    public static void Answer(String text){
-        Text enter = new Text(text);
+    static void Answer(String text, Letter entered_char){
+        Text enter = new Text(text, entered_char);
 
     }
 }

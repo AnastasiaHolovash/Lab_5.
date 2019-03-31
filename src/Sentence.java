@@ -1,16 +1,12 @@
-public class Sentence {
+class Sentence extends Main{
     private static final String PUNCTUATION_SYMBOLS = ";:,.!?";
-    private Word [] words;
-    private Punctuation [] punctuations;
-    Letter entered_char = new Letter('l');
     private String[] string_with_count;
 
+    Sentence(String s, Letter entered_char) {
+        String[] splitString = s.split("(?=[,.!?])|\\s");
 
-    public Sentence(String s) {
-        String[] splitString = s.split("(?=,|\\.|!|\\?)|\\s");
-
-        words = new Word[splitString.length];
-        punctuations = new Punctuation[splitString.length];
+        Word[] words = new Word[splitString.length];
+        Punctuation[] punctuations = new Punctuation[splitString.length];
 
         string_with_count = new String[words.length];
 

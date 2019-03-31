@@ -1,7 +1,7 @@
-public class Punctuation {
+class Punctuation {
     private String symbol;
 
-    public Punctuation(String symbol) {
+    Punctuation(String symbol) {
         this.symbol = symbol;
         //System.out.println("P  >>  "+ symbol);
     }
