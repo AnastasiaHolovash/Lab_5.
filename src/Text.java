@@ -4,7 +4,6 @@ import java.util.Collections;
 class Text {
 
     private ArrayList big_string_with_count = new ArrayList();
-    private char myChar;
 
     private Text(String textString, Letter entered_char) {
         System.out.println("==========Original=========");
