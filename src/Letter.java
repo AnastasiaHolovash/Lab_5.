@@ -3,6 +3,16 @@ public class Letter {
 
     public Letter(char symbol) {
         this.symbol = symbol;
-        //System.out.println("L  >>  "+ symbol);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Letter) {
+            return Character.toLowerCase(((Letter) obj).symbol) == Character.toLowerCase(symbol);
+        }
+        return false;
+    }
+
+
+
 }
