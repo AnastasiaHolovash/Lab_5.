@@ -13,6 +13,11 @@ public class Letter {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return symbol + "";
+    }
+
 
 
 }

@@ -3,6 +3,7 @@ import java.util.Collections;
 
 class Text {
 
+    private Sentence[] sentences;
     private ArrayList big_string_with_count = new ArrayList();
 
     private Text(String textString, Letter entered_char) {
@@ -12,7 +13,7 @@ class Text {
         System.out.println();
 
         String[] splitString = textString.split("(?<=[?!.])");
-        Sentence[] sentences = new Sentence[splitString.length];
+        sentences = new Sentence[splitString.length];
         for (int i = 0; i < splitString.length; i++) {
             sentences[i] = new Sentence(splitString[i], entered_char);
 
@@ -38,5 +39,14 @@ class Text {
     static void Answer(String text, Letter entered_char){
         Text enter = new Text(text, entered_char);
 
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (Sentence sentence : sentences) {
+            result += sentence.toString() + " ";
+        }
+        return result;
     }
 }
