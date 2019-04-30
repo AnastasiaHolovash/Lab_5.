@@ -1,10 +1,11 @@
 import java.util.Arrays;
 
 class Word extends SentenceMember{
-    private Letter[] letters;
+    public static Letter[] letters;
 
 
     Word(String word) {
+        //public static Letter[] letters;
         //System.out.println(word);
         letters = new Letter[word.length()];
         for (int i = 0; i < word.length(); i++) {
@@ -12,7 +13,7 @@ class Word extends SentenceMember{
         }
         System.out.println(Arrays.toString(letters));
     }
-
+/*
     int Letter_counter(Letter entered_char) {
         int counter = 0;
         for (Letter letter : letters) {
@@ -23,7 +24,7 @@ class Word extends SentenceMember{
         }
         return counter;
     }
-
+*/
     @Override
     public String toString() {
         String result = "";

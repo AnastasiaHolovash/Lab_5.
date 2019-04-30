@@ -24,10 +24,10 @@ class Sentence extends Main{
                 //punctuations[i] = new Punctuation(splitString[i]);
             } else {
                 sentenceMembers[i] = new Word(splitString[i]);
-                words[i] = new Word(splitString[i]);
+                //words[i] = new Word(splitString[i]);
                 //System.out.println(words[i].Letter_counter(entered_char));
-                string_with_count[i] = (words[i].Letter_counter(entered_char) + " : " + splitString[i]);
-                //string_with_count[i] = (sentenceMembers[i].Letter_counter(entered_char) + " : " + splitString[i]);
+                //string_with_count[i] = (words[i].Letter_counter(entered_char) + " : " + splitString[i]);
+                string_with_count[i] = (sentenceMembers[i].Letter_counter(entered_char) + " : " + splitString[i]);
             }
 
         }
